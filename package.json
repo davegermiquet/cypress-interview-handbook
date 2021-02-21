@@ -4,7 +4,7 @@
   "description": "Alayacare's interview project for QA automation.",
   "scripts": {
     "start:section-2": "node app/assets/js/section-2/server.js",
-    "start": "serve --listen ${PORT:-8080}",
+    "start": "serve --listen ${PORT:-7888}",
     "dev": "npm start",
     "lint": "npx eslint app/**/*.js",
     "cy:open": "cypress open",
