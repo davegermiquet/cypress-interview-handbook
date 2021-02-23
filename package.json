@@ -31,7 +31,6 @@
     "serve": "11.3.0"
   },
   "devDependencies": {
-    "wait-on": "5.2.1",
     "@bahmutov/print-env": "1.2.0",
     "@cypress/eslint-plugin-dev": "5.0.0",
     "cypress": "6.2.1",
@@ -43,6 +42,7 @@
     "globby": "9.1.0",
     "stop-build": "1.1.0",
     "typescript": "3.7.4",
+    "wait-on": "5.2.1",
     "yaml-lint": "1.2.4"
   },
   "engines": {
