@@ -4,12 +4,13 @@
   "description": "Alayacare's interview project for QA automation.",
   "scripts": {
     "start:section-2": "node app/assets/js/section-2/server.js",
-    "start": "serve --listen ${PORT:-7888}",
+    "start": "serve --listen ${PORT:-2555} & echo \"export PID=\"$!\"\"> serve.env",
     "dev": "npm start",
     "lint": "npx eslint app/**/*.js",
     "cy:open": "cypress open",
     "cy:verify": "cypress verify",
     "cy:test": "cypress run",
+    "cy:serveAndTest": "npm run start && wait-on http://localhost:2555/ && . ./serve.env && npm run cy:test ; kill -9 $PID",
     "cy:info": "cypress info",
     "cy:version": "cypress version",
     "cy:cache:list": "cypress cache list"
@@ -30,6 +31,7 @@
     "serve": "11.3.0"
   },
   "devDependencies": {
+    "wait-on": "5.2.1",
     "@bahmutov/print-env": "1.2.0",
     "@cypress/eslint-plugin-dev": "5.0.0",
     "cypress": "6.2.1",

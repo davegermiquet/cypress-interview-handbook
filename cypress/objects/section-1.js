@@ -1,6 +1,6 @@
 const Seection1 = {
-  page: {
-      web_site_url: "http://192.168.1.183:49179/section-1"
+  constants: {
+      web_site_url: "http://localhost:2555/section-1"
   },
 
   /**
@@ -58,4 +58,4 @@ const Seection1 = {
   },
  },
 }
-module.exports = { Seection1 }
+module.exports =  Seection1

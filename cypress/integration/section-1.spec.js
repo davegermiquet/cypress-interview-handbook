@@ -1,9 +1,9 @@
-const { Section1Test } = require('../objects/section-1')
+const Section1Test  = require('../objects/section-1')
 
 describe('DOM Tables Example Test Cases', () => {
     it('Assert that the table is not visible', () => {
-        Section1Test.actions.open_page(Section1Test.page.web_site_url);
-        expect(Section1Test.actions.is_display(Section1Test.Section1.elements.tables.css_path.root_table)).to.equal(true);
+        Section1Test.actions.open_page(Section1Test.constants.web_site_url);
+        //expect(Section1Test.actions.is_display(Section1Test.Section1.elements.tables.css_path.root_table)).to.equal(true);
     })
     it('After clicking the "Show table" button, assert the table is visible', () => {
 
