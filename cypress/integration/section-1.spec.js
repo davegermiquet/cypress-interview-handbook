@@ -22,7 +22,7 @@ describe('DOM Tables Example Test Cases', () => {
         expectation.child_elements(command.size(pageElement.rows_parent,'tr'),expected_data.amount_of_rows);
     })
     it('Assert that an admin has the ID of 1', () => {
-        command.get_id_of_admin(pageElement.rows_parent,pageElement.role_column).should('eq','blah')
+        command.get_id_of_admin(pageElement.rows_parent,pageElement.role_column).should('eq','1')
     })
     it('Assert that at least 5 entries have the role "user"', () => {
 

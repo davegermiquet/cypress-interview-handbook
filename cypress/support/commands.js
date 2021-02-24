@@ -27,19 +27,7 @@
 Cypress.Commands.add('get_admin_id',(locator,column) => {
 
     function findElement(current_row,column_number) {
-        return current_row.get('th').eq(column_number).then((element_to_check) => {
-            if (element_to_check.text().trim() === 'admin') {
-                return current_row;
-            }
-            else {
-                return current_row.next('tr');
-            }
-        });
-    }
-   return cy.get(locator).get('tr').then((initial_row) => {
-        found_element = findElement(cy.wrap(initial_row),column)
-        found_element.get('th').eq(column_number).then((element_to_check) => {
-
-        });
-    });
-})
+        return current_row.get('tr').filter(':contains("admin")');
+    };
+    return findElement(cy.get(locator).children('tr')).children('th').eq('0').invoke('text');
+});
